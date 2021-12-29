@@ -1,4 +1,4 @@
-package dev.arj.radiobutton
+package dev.arj.snackbar
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
