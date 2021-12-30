@@ -2,19 +2,32 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/container_snackbar"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".MainActivity">
 
-  <com.google.android.material.button.MaterialButton
-    android:id="@+id/button_delete_photo"
+  <!-- Linear progress indicator -->
+  <com.google.android.material.progressindicator.LinearProgressIndicator
+    android:id="@+id/linear_progress"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:indeterminate="true"
+    app:layout_constraintBottom_toTopOf="@id/circular_progress"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed" />
+
+  <!-- Circular progress indicator -->
+  <com.google.android.material.progressindicator.CircularProgressIndicator
+    android:id="@+id/circular_progress"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Hapus Foto"
+    android:layout_marginTop="40dp"
+    android:indeterminate="true"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/linear_progress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

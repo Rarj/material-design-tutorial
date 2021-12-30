@@ -1,4 +1,4 @@
-package dev.arj.snackbar
+package dev.arj.progressindicator
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
